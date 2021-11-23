@@ -272,10 +272,33 @@ ul {
 .doing-item + .doing-item {
   margin-left: 30px;
 }
+.doing-item {
+  position: relative;
+}
 .doing-img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.box-img {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 370px;
+  height: 70px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.doing-img-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--fourth-tittle-color);
 }
 /* --------------------НАША КОМАНДА------------------------------ */
 .command {
@@ -530,6 +553,32 @@ ul {
   display: block;
   max-width: 100%;
   height: auto;
+}
+.box-works-img {
+  width: 370px;
+  height: 294px;
+  position: relative;
+}
+.box-text-img:hover,
+.box-text-img:focus {
+  opacity: 1;
+}
+.box-text-img {
+  position: absolute;
+  top: 0;
+  padding: 63px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+}
+.text-img {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--second-text-color);
 }
 .works-item-cont {
   padding: 20px 24px;
