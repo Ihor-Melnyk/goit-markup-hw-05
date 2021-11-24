@@ -78,19 +78,27 @@ ul {
   letter-spacing: 0.03em;
   color: var(--third-tittle-color);
 }
-.header-link:active,
+.header-link:hover::after {
+  content: '';
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  height: 4px;
+  background-color: var(--main-title-color);
+  border-radius: 2px;
+}
+
 .header-link:hover,
 .header-link:focus,
-.header-mail:active,
 .header-mail:hover,
 .header-mail:focus,
 .header-tel:focus,
-.header-tel:active,
 .header-tel:hover,
-.works-item-text:active,
 .works-item-text:hover,
 .works-item-text:focus,
-.works-title:active,
 .works-title:focus,
 .works-title:hover {
   color: var(--main-title-color);
@@ -135,6 +143,7 @@ ul {
   align-items: center;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-tel {
   padding-top: 32px;
@@ -146,6 +155,7 @@ ul {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* --------------------BODY---------------------------------- */
 .section {
@@ -365,7 +375,7 @@ ul {
 }
 .command-thumb-link:focus,
 .command-thumb-link:hover {
-  color: #fff;
+  color: var(--second-text-color);
   background-color: var(--main-title-color);
 }
 .command-thumb-link {
@@ -377,6 +387,9 @@ ul {
   border-radius: 50%;
   background-color: var(--second-text-color);
   color: var(--link-color);
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .command-item-icon {
   fill: currentColor;
@@ -413,6 +426,8 @@ ul {
   color: var(--link-color);
   background-color: var(--second-text-color);
   border-radius: 4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients-logo {
   fill: currentColor;
@@ -500,6 +515,8 @@ ul {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   color: var(--fourth-tittle-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social-icon {
   fill: currentColor;
@@ -558,9 +575,11 @@ ul {
   width: 370px;
   height: 294px;
   position: relative;
+  overflow: hidden;
 }
-.box-text-img:hover,
-.box-text-img:focus {
+.box-works-img:hover .box-text-img,
+.box-works-img:focus .box-text-img {
+  transform: translateY(0);
   opacity: 1;
 }
 .box-text-img {
@@ -572,6 +591,9 @@ ul {
   align-items: center;
   opacity: 0;
   background-color: rgba(33, 150, 243, 0.9);
+
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .text-img {
   font-weight: normal;
