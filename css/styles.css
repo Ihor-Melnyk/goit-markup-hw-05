@@ -581,8 +581,7 @@ ul {
   position: relative;
   overflow: hidden;
 }
-.box-works-img:hover .box-text-img,
-.box-works-img:focus .box-text-img {
+.box-works-img:hover .box-text-img {
   transform: translateY(0);
   opacity: 1;
 }
@@ -669,7 +668,7 @@ ul {
 .modal {
   width: 528px;
   min-height: 581px;
-  background-color: #ffffff;
+  background-color: var(--fourth-tittle-color);
   border-radius: 5px;
   position: absolute;
   top: 50%;
@@ -682,12 +681,13 @@ ul {
 .modal-close {
   width: 30px;
   height: 30px;
-  background-color: transparent;
-  border: 1px solid #999999;
+  background-color: var(--fourth-tittle-color);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
   border-radius: 50%;
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 8px;
+  right: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
